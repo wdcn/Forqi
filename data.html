@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js): loads ONLY on production hosts, so localhost, file:// and
+     preview deploys are never counted. Add hosts to GA_HOSTS if the site moves. -->
+<script>
+  (function () {
+    var GA_ID = 'G-6EF2BJPP9G';
+    var GA_HOSTS = /(^|\.)forqi\.(ai|net)$/i;
+    window.dataLayer = window.dataLayer || [];
+    if (!GA_HOSTS.test(location.hostname)) {
+      window.gtag = function () { if (window.console && console.debug) console.debug('[analytics off on ' + (location.hostname || 'file') + ']', arguments); };
+      return;
+    }
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Catalog — Forqi AI Training Datasets</title>
+<meta name="description" content="Browse and preview Forqi's AI training datasets: LLM SFT & RLHF, speech & audio, computer vision, multimodal, autonomous driving, embodied AI, OCR, NLP and industry verticals.">
+<meta property="og:title" content="Forqi Data Catalog — Preview Every Dataset">
+<meta property="og:description" content="Featured licensed, consent-based AI training datasets. Inspect sample records, schema and specs before you license, and ask about the full catalog.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://forqi.ai/data.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg stroke='%23F37021' stroke-width='7' stroke-linecap='round'%3E%3Cline x1='50' y1='8' x2='50' y2='30'/%3E%3Cline x1='50' y1='8' x2='50' y2='30' transform='rotate(60 50 50)'/%3E%3Cline x1='50' y1='8' x2='50' y2='30' transform='rotate(120 50 50)'/%3E%3Cline x1='50' y1='8' x2='50' y2='30' transform='rotate(180 50 50)'/%3E%3Cline x1='50' y1='8' x2='50' y2='30' transform='rotate(240 50 50)'/%3E%3Cline x1='50' y1='8' x2='50' y2='30' transform='rotate(300 50 50)'/%3E%3C/g%3E%3Cg stroke='%231A161A' stroke-width='7' stroke-linecap='round'%3E%3Cline x1='50' y1='18' x2='50' y2='30' transform='rotate(30 50 50)'/%3E%3Cline x1='50' y1='18' x2='50' y2='30' transform='rotate(90 50 50)'/%3E%3Cline x1='50' y1='18' x2='50' y2='30' transform='rotate(150 50 50)'/%3E%3Cline x1='50' y1='18' x2='50' y2='30' transform='rotate(210 50 50)'/%3E%3Cline x1='50' y1='18' x2='50' y2='30' transform='rotate(270 50 50)'/%3E%3Cline x1='50' y1='18' x2='50' y2='30' transform='rotate(330 50 50)'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "name": "Forqi Data Catalog",
+  "url": "https://forqi.ai/data.html",
+  "description": "Licensed AI training datasets across LLM, speech, vision, multimodal, autonomous driving, embodied AI, documents/OCR, NLP and industry verticals.",
+  "publisher": { "@type": "Organization", "name": "Forqi LLC", "url": "https://forqi.ai" }
+}
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Forqi home">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke="#F37021" stroke-width="8" stroke-linecap="round">
+          <line x1="50" y1="8" x2="50" y2="30"/><line x1="50" y1="8" x2="50" y2="30" transform="rotate(60 50 50)"/><line x1="50" y1="8" x2="50" y2="30" transform="rotate(120 50 50)"/>
+          <line x1="50" y1="8" x2="50" y2="30" transform="rotate(180 50 50)"/><line x1="50" y1="8" x2="50" y2="30" transform="rotate(240 50 50)"/><line x1="50" y1="8" x2="50" y2="30" transform="rotate(300 50 50)"/>
+        </g>
+        <g stroke="#1A161A" stroke-width="8" stroke-linecap="round">
+          <line x1="50" y1="18" x2="50" y2="30" transform="rotate(30 50 50)"/><line x1="50" y1="18" x2="50" y2="30" transform="rotate(90 50 50)"/><line x1="50" y1="18" x2="50" y2="30" transform="rotate(150 50 50)"/>
+          <line x1="50" y1="18" x2="50" y2="30" transform="rotate(210 50 50)"/><line x1="50" y1="18" x2="50" y2="30" transform="rotate(270 50 50)"/><line x1="50" y1="18" x2="50" y2="30" transform="rotate(330 50 50)"/>
+        </g>
+      </svg>
+      Forqi</a>
+    <ul class="links">
+      <li><a href="index.html#qllect">Qllect®</a></li>
+      <li><a href="data.html" aria-current="page">Datasets</a></li>
+      <li><a href="index.html#consulting">AI Consulting</a></li>
+      <li><a class="cta" href="index.html#contact">Contact Us</a></li>
+    </ul>
+    <button class="burger" aria-label="Open menu" aria-expanded="false"
+            onclick="const m=document.getElementById('mm');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'));">☰</button>
+  </nav>
+  <ul class="mobile-menu" id="mm">
+    <li><a href="index.html#qllect">Qllect®</a></li>
+    <li><a href="data.html">Datasets</a></li>
+    <li><a href="index.html#consulting">AI Consulting</a></li>
+    <li><a href="index.html#contact">Contact Us</a></li>
+  </ul>
+</header>
+
+<main>
+  <div class="cat-hero">
+    <div class="wrap">
+      <div class="label"><span class="idx">→</span> Data Catalog</div>
+      <h1>The Forqi<br><span class="hl">Data Storefront</span></h1>
+      <p>Our catalog of licensed, consent-based training data runs well beyond what fits on one page. Below is a featured selection: open any dataset to inspect sample records, the full schema and delivery specs. The rest of our catalog is available on request, and if a ready-made dataset doesn't exist, we generate it on demand with Qllect®.</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="chips" id="cat-chips" role="group" aria-label="Filter by domain"></div>
+    </div>
+  </div>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="results-meta" id="cat-meta" aria-live="polite"></div>
+      <div class="catalog-note">
+        <p><strong>Featured selection.</strong> These are highlights from our catalog. More datasets across these domains and others are available on request.</p>
+        <p><strong>Nothing ready-made?</strong> Qllect® can collect and annotate exactly what you need, starting with a pilot batch.</p>
+        <a class="btn sm solid" href="index.html#contact">Ask about the full catalog</a>
+      </div>
+      <div id="catalog"><noscript><p class="empty">Enable JavaScript to browse the catalog, or email partner@forqi.ai for the dataset list.</p></noscript></div>
+      <p class="disclaimer">Volumes, languages and specs are indicative and are confirmed in each quote. In-browser previews are synthetic records written to show each dataset's schema, format and annotation style — they contain no real personal data. Fuller evaluation samples are shared under NDA.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--tint);">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <div class="label"><span class="idx">+</span> Custom Data</div>
+        <h2>Don't see it? We'll build it.</h2>
+        <p>New languages, new sensors, your own annotation guidelines: tell us the spec and we'll scope a collection or annotation program on our Qllect® crowd platform, starting with a pilot batch.</p>
+      </div>
+      <div style="align-self:end;display:flex;gap:14px;flex-wrap:wrap;">
+        <a class="btn solid" href="index.html#contact">Request custom data</a>
+        <a class="btn" href="mailto:partner@forqi.ai?subject=Forqi%20catalog%20question">Email the data team</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <span>© 2026 Forqi LLC</span>
+    <span><a href="index.html">Home</a><a href="data.html">Data Catalog</a><a href="index.html#qllect">Qllect®</a><a href="index.html#consulting">AI Consulting</a><a href="index.html#contact">Contact</a></span>
+  </div>
+</footer>
+
+<script src="assets/catalog-data.js"></script>
+<script src="assets/storefront.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Not part of the website — keep out of the repo / deploy
+*.docx
+.DS_Store
+.claude/
