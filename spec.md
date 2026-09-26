@@ -34,6 +34,7 @@ sections and bordered grids.
 Forqi/                     (repo root = the deployed site)
 ├── index.html             # homepage
 ├── data.html              # dataset catalog (featured selection) + preview drawer
+├── 404.html               # custom not-found page (served by Vercel for missing paths)
 ├── spec.md                # this document (not needed at runtime)
 ├── .gitignore             # keeps *.docx, .DS_Store, .claude/ out of the repo
 └── assets/
@@ -46,6 +47,15 @@ Forqi/                     (repo root = the deployed site)
 
 To add or change a dataset, edit only `assets/catalog-data.js`. The catalog, home tiles,
 filters and previews all update automatically.
+
+### 404 page (`404.html`)
+Vercel serves `/404.html` automatically for any missing path. It uses the site header, footer
+and tokens, with absolute asset and link paths (`/assets/site.css`, `/#qllect`) so it renders
+correctly at any URL depth. Contents: an "Error 404" label, a large orange **404**, the H1
+"PAGE NOT FOUND", and a line showing the missing path with a note that it may have moved in
+the forqi.ai relaunch. CTAs: Back to Home / Contact Us. Below that are three destination
+cards (Qllect®, Dataset Catalog, AI Consulting). It is marked `noindex` and sends a GA
+`page_not_found` event with `page_path` and `page_referrer` (production hosts only).
 
 ## 3. Design tokens (`:root` in site.css)
 
@@ -232,6 +242,7 @@ counted. Update `GA_HOSTS` if the site moves.
 | `contact_click` | method (email / phone), location | mailto: / tel: links |
 | `contact_form_submit` | interest, offering | Contact form submitted |
 | `generate_lead` | lead_source, offering | Same moment (GA4 recommended event) |
+| `page_not_found` | page_path, page_referrer | 404 page viewed |
 
 **GA4 admin setup:**
 - Register `dataset_id`, `dataset_category`, `source`, `location`, `offering`, `interest` and `cta_text` as event-scoped custom dimensions.
@@ -256,7 +267,7 @@ counted. Update `GA_HOSTS` if the site moves.
 ## 13. Deployment & roadmap
 
 **Deploy** the repo root as-is to any static host (GitHub Pages, Cloudflare Pages, Netlify).
-There is no build step. Only `index.html`, `data.html` and `assets/` are served content. Point
+There is no build step. Only `index.html`, `data.html`, `404.html` and `assets/` are served content. Point
 `forqi.ai` at the host with HTTPS, and redirect `forqi.net` → `forqi.ai`.
 
 **Repo:** `github.com/wdcn/Forqi`, branch `master`.
@@ -284,3 +295,4 @@ There is no build step. Only `index.html`, `data.html` and `assets/` are served 
 | v2.8 | Catalog search removed; datasets framed as a featured selection, full catalog on request, Qllect for anything missing |
 | v2.9 | GA4 limited to production hosts; custom engagement events |
 | v3.0 | Balanced site promoted to repo root; alternate versions removed; `.gitignore` added; this spec consolidated |
+| v3.1 | Custom `404.html` page |
