@@ -136,12 +136,12 @@ Section order:
 7. **05 About Forqi** (`#about`): one company with three offerings that reinforce each other.
    - Facts: Data-Grounded · Enterprise & Government-Ready · Responsible AI.
 8. **06 Contact** (`#contact`): "Let's talk".
-   - **Email:** **partner@forqi.ai** (large, orange underline).
+   - **Email:** **info@forqi.ai** (large, orange underline).
    - **Details list** (`.contact-details`):
      - **Address:** 522 W Riverside Ave, Ste N, Spokane, WA 99201
      - **Phone:** (425) 955-9388, a `tel:+14259559388` link
      - **Web:** forqi.ai
-   - **Form** (`mailto:partner@forqi.ai`): Name, Organization, Email, "I'm interested in" select with 3 option groups, and "How can we help?":
+   - **Form** (`mailto:info@forqi.ai`): Name, Organization, Email, "I'm interested in" select with 3 option groups, and "How can we help?":
      - *Qllect®:* data generation / user research / annotation-RLHF-evaluation
      - *Dataset Services:* licensing / custom cut or extension
      - *AI Consulting:* analytics / modernization-cloud / readiness-strategy
@@ -160,7 +160,7 @@ Section order:
 - **Filter bar** (sticky on desktop, static on mobile with sideways-scrolling chips): *All domains* plus the 9 domain chips, **without counts**. **There is no search box.**
 - **Result line:** "Featured datasets · <domain | all domains> — more available on request".
 - **Catalog note** (`.catalog-note`, tint): "Featured selection…" · "Nothing ready-made? Qllect® can collect and annotate…" · "Ask about the full catalog" button.
-- **Dataset cards**, grouped by domain: ID, name, summary, volume, coverage, formats, task tags, **Preview sample** and **Request** (a `mailto:partner@forqi.ai` link prefilled with the dataset ID).
+- **Dataset cards**, grouped by domain: ID, name, summary, volume, coverage, formats, task tags, **Preview sample** and **Request** (a `mailto:info@forqi.ai` link prefilled with the dataset ID).
 - **Preview drawer** (right-side dialog, full-width on mobile):
   - Tabs: Sample preview · Schema · Specs & licensing.
   - Footer: "Download sample JSON" (client-side Blob) and "Request this dataset".
@@ -262,7 +262,7 @@ counted. Update `GA_HOSTS` if the site moves.
   - **Home title:** "Forqi LLC — Qllect® Crowd Data Platform, AI Datasets & AI Consulting"; meta and OG copy name all three offerings.
   - **Home JSON-LD:** `Organization` with email, telephone and `PostalAddress` (Spokane, WA 99201).
   - **Catalog title:** "Data Catalog — Forqi AI Training Datasets"; JSON-LD `DataCatalog`.
-  - **Domain:** all URLs and emails use `forqi.ai` / `partner@forqi.ai`.
+  - **Domain:** all URLs and emails use `forqi.ai` / `info@forqi.ai`.
 
 ## 13. Deployment & roadmap
 
@@ -296,3 +296,4 @@ There is no build step. Only `index.html`, `data.html`, `404.html` and `assets/`
 | v2.9 | GA4 limited to production hosts; custom engagement events |
 | v3.0 | Balanced site promoted to repo root; alternate versions removed; `.gitignore` added; this spec consolidated |
 | v3.1 | Custom `404.html` page |
+| v3.2 | Contact email changed from partner@forqi.ai to **info@forqi.ai** across the site (Contact section, form, JSON-LD, catalog page) |

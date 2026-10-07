@@ -5,7 +5,7 @@
   var C = window.FORQI_CATALOG;
   if (!C) return;
   var ORANGE = "#F37021", INK = "#1A161A";
-  var CONTACT = "partner@forqi.ai";
+  var CONTACT = "info@forqi.ai";
 
   var catById = {};
   C.categories.forEach(function (c) { catById[c.id] = c; });
